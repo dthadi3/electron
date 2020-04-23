@@ -5,5 +5,5 @@
 	path = vendor/boto
 	url = https://github.com/boto/boto.git
 [submodule "patches/chromium_power"]
-	path = patches/chromium_power
+	path = patches/ppc64le/chromium_power
 	url = https://github.com/leo-lb/chromium_power.git

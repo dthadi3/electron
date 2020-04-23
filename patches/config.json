@@ -1,4 +1,8 @@
 {
+  "src/electron/patches/chromium_power": "src",
+
+  "src/electron/patches/ppc64le": "src",
+
   "src/electron/patches/chromium": "src",
 
   "src/electron/patches/angle": "src/third_party/angle",

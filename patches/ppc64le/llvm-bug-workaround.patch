@@ -1,0 +1,11 @@
+--- a/third_party/ffmpeg/libavformat/utils.c	2019-10-10 14:55:27.000000000 -0400
++++ b/third_party/ffmpeg/libavformat/utils.c	2019-10-17 15:39:59.495117121 -0400
+@@ -3316,7 +3316,7 @@
+
+ int ff_rfps_add_frame(AVFormatContext *ic, AVStream *st, int64_t ts)
+ {
+-    int i, j;
++    volatile int i, j;
+     int64_t last = st->info->last_dts;
+
+     if (   ts != AV_NOPTS_VALUE && last != AV_NOPTS_VALUE && ts > last
