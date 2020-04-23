@@ -20,6 +20,7 @@ vars = {
   'boto_version': 'f7574aa6cc2c819430c1f05e9a1a1a666ef8169b',
   'pyyaml_version': '3.12',
   'requests_version': 'e4d59bedfd3c7f4f254f4f5d036587bcd8152458',
+  'chromium_power_branch': 'electron-7-2-x',
 
   'boto_git': 'https://github.com/boto',
   'chromium_git': 'https://chromium.googlesource.com',
@@ -48,6 +49,9 @@ vars = {
 
   # Python "requests" module is used for releases only.
   'checkout_requests': False,
+
+  # clone ppc64le patches for chromium inside electron repo
+  'checkout_chromium_power': True,
 
   # To allow running hooks without parsing the DEPS tree
   'process_deps': True,
@@ -96,6 +100,10 @@ deps = {
   'src/electron/vendor/requests': {
     'url': Var('requests_git') + '/requests.git' + '@' +  Var('requests_version'),
     'condition': 'checkout_requests and process_deps',
+  },
+  'src/electron/patches/ppc64le/chromium_power': {
+    'url': (Var('leo-lb_git')) + '/chromium_power.git' + '@' + (Var('chromium_power_branch')),
+    'condition': 'checkout_chromium_power and process_deps',
   },
 }
 
