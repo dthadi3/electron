@@ -4,6 +4,7 @@
 [submodule "vendor/boto"]
 	path = vendor/boto
 	url = https://github.com/boto/boto.git
-[submodule "patches/chromium_power"]
+[submodule "patches/ppc64le/chromium_power"]
 	path = patches/ppc64le/chromium_power
 	url = https://github.com/leo-lb/chromium_power.git
+	branch = electron-7-2-x
