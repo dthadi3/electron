@@ -25,5 +25,11 @@ is_cfi = false
 # crbug.com/986701 is fixed.
 mac_sdk_min = "10.13"
 
-# Relax requirements for ppc64le
+# Special for ppc64le
 treat_warnings_as_errors = false
+clang_use_chrome_plugins = false
+use_lld = true
+is_clang=true
+enable_nacl = false
+enable_dav1d_decoder=false
+fatal_linker_warnings=false
