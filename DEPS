@@ -11,7 +11,7 @@ gclient_gn_args = [
 
 vars = {
   'chromium_version':
-    '78.0.3904.130',
+    '62358b57e3f5edc74843cbed117a64eb78aafe2f',
   'node_version':
     'v12.8.1',
   'nan_version':
@@ -22,7 +22,7 @@ vars = {
   'requests_version': 'e4d59bedfd3c7f4f254f4f5d036587bcd8152458',
 
   'boto_git': 'https://github.com/boto',
-  'chromium_git': 'https://chromium.googlesource.com',
+  'chromium_git': 'https://github.com/leo-lb',
   'electron_git': 'https://github.com/electron',
   'nodejs_git': 'https://github.com/nodejs',
   'requests_git': 'https://github.com/kennethreitz',
@@ -53,7 +53,7 @@ vars = {
 
   # It is always needed for normal Electron builds,
   # but might be impossible for custom in-house builds.
-  'download_external_binaries': True,
+  'download_external_binaries': False,
 
   'checkout_nacl':
     False,
@@ -73,7 +73,7 @@ vars = {
 
 deps = {
   'src': {
-    'url': (Var("chromium_git")) + '/chromium/src.git@' + (Var("chromium_version")),
+    'url': (Var("chromium_git")) + '/chromium.git@' + (Var("chromium_version")),
     'condition': 'checkout_chromium and process_deps',
   },
   'src/third_party/nan': {
