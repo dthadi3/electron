@@ -1,5 +1,5 @@
---- a/third_party/ffmpeg/libavformat/utils.c	2019-10-10 14:55:27.000000000 -0400
-+++ b/third_party/ffmpeg/libavformat/utils.c	2019-10-17 15:39:59.495117121 -0400
+--- a/third_party/ffmpeg/libavformat/utils.c
++++ b/third_party/ffmpeg/libavformat/utils.c
 @@ -3316,7 +3316,7 @@
 
  int ff_rfps_add_frame(AVFormatContext *ic, AVStream *st, int64_t ts)
